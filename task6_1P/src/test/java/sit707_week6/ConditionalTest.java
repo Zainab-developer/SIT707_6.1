@@ -7,38 +7,37 @@ public class ConditionalTest {
 	
 	@Test
 	public void testSumUpTo() {
-	    Assert.assertEquals(1, Conditional.sumUpTo(1)); // Test with n = 1
-	    Assert.assertEquals(15, Conditional.sumUpTo(5)); // Test with n = 5
-	    Assert.assertEquals(0, Conditional.sumUpTo(0)); // Test with n = 0
-	    Assert.assertEquals(55, Conditional.sumUpTo(10)); // Test with n = 10
-	    Assert.assertEquals(0, Conditional.sumUpTo(-3)); // Test with negative n
-	    Assert.assertEquals(500500, Conditional.sumUpTo(1000)); }
+	    Assert.assertEquals(1, Conditional.sumUpTo(1));
+	    Assert.assertEquals(15, Conditional.sumUpTo(5));
+	    Assert.assertEquals(0, Conditional.sumUpTo(0));
+	    Assert.assertEquals(55, Conditional.sumUpTo(10));
+	    Assert.assertEquals(0, Conditional.sumUpTo(-3));
+	    Assert.assertEquals(500500, Conditional.sumUpTo(1000));
+	}
 	
 	@Test
 	public void testSumUpToDifferent() {
-	    Assert.assertEquals(1, Conditional.sumUpTo(1)); // Test with n = 1
-	    Assert.assertEquals(15, Conditional.sumUpTo(5)); // Test with n = 5
-	    Assert.assertEquals(0, Conditional.sumUpTo(0)); // Test with n = 0
-	    Assert.assertEquals(55, Conditional.sumUpTo(10)); // Test with n = 10
-	    Assert.assertEquals(0, Conditional.sumUpTo(-3)); }
-
-	   
+	    Assert.assertEquals(1, Conditional.sumUpTo(1));
+	    Assert.assertEquals(15, Conditional.sumUpTo(5));
+	    Assert.assertEquals(0, Conditional.sumUpTo(0));
+	    Assert.assertEquals(55, Conditional.sumUpTo(10));
+	    Assert.assertEquals(0, Conditional.sumUpTo(-3));
+	}
 
 	@Test
 	public void testIsPalindrome() {
-	    Assert.assertTrue(Conditional.isPalindrome("racecar")); // Test with a palindrome
-	    Assert.assertFalse(Conditional.isPalindrome("hello")); // Test with a non-palindrome
-	    Assert.assertTrue(Conditional.isPalindrome("")); // Test with an empty string
-	    Assert.assertTrue(Conditional.isPalindrome("a")); // Test with a single character string
-	    Assert.assertTrue(Conditional.isPalindrome("level")); // Test with an odd-length palindrome
-	    Assert.assertFalse(Conditional.isPalindrome("hello world")); // Test with a sentence
+	    Assert.assertTrue(Conditional.isPalindrome("racecar"));
+	    Assert.assertFalse(Conditional.isPalindrome("hello"));
+	    Assert.assertTrue(Conditional.isPalindrome(""));
+	    Assert.assertTrue(Conditional.isPalindrome("a"));
+	    Assert.assertTrue(Conditional.isPalindrome("level"));
+	    Assert.assertFalse(Conditional.isPalindrome("hello world"));
 	    
-	    // Additional test cases
-	    Assert.assertTrue(Conditional.isPalindrome("madam")); // Test with another palindrome
-	    Assert.assertTrue(Conditional.isPalindrome("noon")); // Test with another palindrome
-	    Assert.assertFalse(Conditional.isPalindrome("abcde")); // Test with a non-palindrome
-	    Assert.assertTrue(Conditional.isPalindrome("rotor")); // Test with another palindrome
-	    Assert.assertFalse(Conditional.isPalindrome("hello there")); // Test with another non-palindrome
+	    Assert.assertTrue(Conditional.isPalindrome("madam"));
+	    Assert.assertTrue(Conditional.isPalindrome("noon"));
+	    Assert.assertFalse(Conditional.isPalindrome("abcde"));
+	    Assert.assertTrue(Conditional.isPalindrome("rotor"));
+	    Assert.assertFalse(Conditional.isPalindrome("hello there"));
 	}
 
     public int sumOfFirstNIntegers(int n) {
@@ -61,7 +60,6 @@ public class ConditionalTest {
 		Assert.assertNotNull("Student name is null", studentName);
 	}
 	
-
     @Test
     public void testSumOfFirstNIntegers() {
         int result = sumOfFirstNIntegers(5);
@@ -73,10 +71,10 @@ public class ConditionalTest {
         result = sumOfFirstNIntegers(10);
         Assert.assertEquals(55, result);
 
-        result = sumOfFirstNIntegers(0); // Test with zero
+        result = sumOfFirstNIntegers(0);
         Assert.assertEquals(0, result);
 
-        result = sumOfFirstNIntegers(-3); // Test with negative input
+        result = sumOfFirstNIntegers(-3);
         Assert.assertEquals(0, result);
     }
 
@@ -106,27 +104,26 @@ public class ConditionalTest {
         result = containsEvenNumber(array3);
         Assert.assertTrue(result);
 
-        int[] array4 = {2}; // Test with single even number
+        int[] array4 = {2};
         result = containsEvenNumber(array4);
         Assert.assertTrue(result);
 
-        int[] array5 = {1, 3, 5, 7, 9}; // Test with only odd numbers
+        int[] array5 = {1, 3, 5, 7, 9};
         result = containsEvenNumber(array5);
         Assert.assertFalse(result);
     }
+    
     @Test
     public void testOddNumber() {
         int number = 7; 
         Assert.assertFalse(WeatherAndMathUtils.isEven(number));
     }
     
- 
     @Test
     public void testPrimeNumber() {
         int number = 7; 
         Assert.assertTrue(WeatherAndMathUtils.isPrime(number));
     }
-
 
     @Test
     public void testNonPrimeNumber() {
@@ -134,7 +131,6 @@ public class ConditionalTest {
         Assert.assertFalse(WeatherAndMathUtils.isPrime(number));
     }
     
-  
     @Test
     public void testAllClearWeatherAdvice() {
         Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(30.0, 0.0));
@@ -146,17 +142,16 @@ public class ConditionalTest {
         Assert.assertTrue(WeatherAndMathUtils.isEven(number));
     }
 
- 
     @Test
     public void testWarningLevelWeatherAdvice() {
         Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(50.0, 3.0));
     }
     
-   
     @Test
     public void testCancelWeatherAdvice() {
         Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(70.1, 0.0));
     }
+    
     @Test
     public void testDangerousWindSpeedWeatherAdvice() {
         Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 0.0));
@@ -171,13 +166,11 @@ public class ConditionalTest {
     public void testMixedWeatherAdvice() {
         Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(55.0, 5.0));
     }
+    
     @Test(expected = IllegalArgumentException.class)
     public void testIllegalArgumentException() {
         throw new IllegalArgumentException();
     }
-
-
-    
 
     @Test
     public void testAnotherOddNumber() {
@@ -226,6 +219,7 @@ public class ConditionalTest {
     public void testAnotherMixedWeatherAdvice() {
         Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(65.0, 6.0));
     }
+    
     @Test
     public void testAnotherEmptyStringPalindrome() {
         Assert.assertTrue(Conditional.isPalindrome(""));
@@ -280,8 +274,6 @@ public class ConditionalTest {
         Assert.assertFalse(result);
     }
 
-   
-
     @Test
     public void testAnotherNonPalindromeStringWithNumbers() {
         Assert.assertFalse(Conditional.isPalindrome("12321"));
@@ -299,5 +291,4 @@ public class ConditionalTest {
         boolean result = containsEvenNumber(array);
         Assert.assertFalse(result);
     }
-
 }
